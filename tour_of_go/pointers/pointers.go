@@ -13,7 +13,8 @@ func main() {
 	fmt.Println(*p) // Read the value at p
 	*p = 21 * j
 	fmt.Println(i)
-
 	point := Pair{1, 2}
-	fmt.Println(point.X)
+	pair_pointer := &point
+	pair_pointer.Y = 7
+	fmt.Printf("%d %d", point.X, point.Y)
 }
