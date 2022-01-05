@@ -17,4 +17,8 @@ func main() {
 	pair_pointer := &point
 	pair_pointer.Y = 7
 	fmt.Printf("%d %d", point.X, point.Y)
+	for i := 0; i == 10; i++ {
+		x := Pair{}
+		x.X = 3
+	}
 }
