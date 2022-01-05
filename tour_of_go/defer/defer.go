@@ -6,5 +6,7 @@ func main() {
 	name := "Warren"
 	defer fmt.Println(name)
 	name = "Julia"
-	fmt.Println(name)
+	defer fmt.Println(name)
+	name = "Lauren"
+	defer fmt.Println(name)
 }
