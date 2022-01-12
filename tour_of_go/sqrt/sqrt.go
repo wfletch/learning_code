@@ -14,14 +14,15 @@ func sqrt(x float64) float64 {
 			return guess
 		} else {
 			if result > x {
-				guess -= 0.0001
+				guess -= error_margin / 10
 			} else {
-				guess += 0.0001
+				guess += error_margin / 10
 			}
 		}
 	}
 }
 
 func main() {
-	fmt.Println(sqrt(5))
+	fmt.Printf("%f.", sqrt(42))
+
 }
