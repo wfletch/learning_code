@@ -1,4 +1,4 @@
-# learning_languages
+# learning_code
 This repository simply hosts my attempts to learn numerous programming langauges/technologies
 
 Languages/technologies not covered (I already use them professionally)
