@@ -1,3 +1,5 @@
 .*/
 kotlin/lib/*
 kotlin/out/*
+node_modules/
+*.json
