@@ -14,7 +14,8 @@ def solve(A):
     # Have two Indexes: Left and Right
     # Add values to the locations of each index until the indeces overlap (or are the same)
     # Each iteration lower the max depth the number can go to
-    # Once the mid point has been reached, Climb back up
+    # We can leverage the fact that the system is symettrical in the X and Y 'planes'
+    # Therefore, we can solve row [x] as well as [max_dim - x] at the same time
     l = 0
     r = (A*2) - 2
     cur_dec = 0
