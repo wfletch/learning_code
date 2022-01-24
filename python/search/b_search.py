@@ -1,5 +1,5 @@
 import sys
-
+#TODO: recursive Interation
 def recursive_search(sorted_list, element, lower_index=-1, upper_index=0):
     pass
 def b_search(sorted_list, element):
