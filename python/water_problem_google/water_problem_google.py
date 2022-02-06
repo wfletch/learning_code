@@ -10,6 +10,7 @@ def water_problem(height, water_level):
     # If during the pass we find a -1 height. We know we have a sink
     #   This just means the current path has zero contribution to the total water we can store
     # [0, 1, 0, 4, 2, 5, 3, -1, 2]
+    # TODO: Keep track of highest point as we go along. It is possible to have sub heights
     l_pointer = 0
     r_pointer = 0
     cur_peak = water_level
