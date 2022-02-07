@@ -1,4 +1,6 @@
 import sys
+import threading
+
 
 def ackerman(m,n):
     # Base Case
@@ -11,13 +13,16 @@ def ackerman(m,n):
 
 
 if __name__ == "__main__":
-    sys.setrecursionlimit(150000)
-    print(ackerman(1,1))
-    print(ackerman(2,1))
-    print(ackerman(3,1))
-    print(ackerman(4,1))
-    print(ackerman(1,2))
-    print(ackerman(2,2))
-    print(ackerman(3,2))
+    threading.stack_size(67108864)
+    sys.setrecursionlimit(2 ** 20)
+    thread = threading.Thread(target=ackerman(4,1))
+    thread.start()
+    #print(ackerman(1,1))
+    #print(ackerman(2,1))
+    #print(ackerman(3,1))
+    #print(ackerman(4,1))
+    #print(ackerman(1,2))
+    #print(ackerman(2,2))
+    #print(ackerman(3,2))
  #   print(ackerman(4,2))
 
