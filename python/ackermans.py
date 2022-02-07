@@ -1,3 +1,5 @@
+import sys
+
 def ackerman(m,n):
     # Base Case
     if  m ==  0:
@@ -9,10 +11,11 @@ def ackerman(m,n):
 
 
 if __name__ == "__main__":
+    sys.setrecursionlimit(150000)
     print(ackerman(1,1))
     print(ackerman(2,1))
     print(ackerman(3,1))
-#    print(ackerman(4,1))
+    print(ackerman(4,1))
     print(ackerman(1,2))
     print(ackerman(2,2))
     print(ackerman(3,2))
