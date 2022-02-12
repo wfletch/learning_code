@@ -1,0 +1,9 @@
+#!/bin/python
+import math
+import random
+import string
+
+tim_fatness = random.randrange(200)
+tim_the_dinosaur = "".join(random.choice(string.ascii_letters) for k in range(tim_fatness))
+
+print(tim_the_dinosaur)
