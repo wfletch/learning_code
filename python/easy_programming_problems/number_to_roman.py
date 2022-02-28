@@ -1,6 +1,3 @@
-from numpy import number
-
-
 def number_to_roman(number):
     # We are going to have a limit on the number we can convert
     if number > 3999 or number < 1:
