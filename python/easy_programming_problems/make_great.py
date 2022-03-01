@@ -19,7 +19,7 @@ class Solution:
                 l_pointer+=1
                 r_pointer+=1
         return s
-
+# LeetCode 1544
 # Time Complexity O(n + k) where K is the number of edits we use. Also, a ton of time is being wasted on reformatting the string
 # Space Complexity: O(1)
 # How Would I optimize. I would keep the two pointer approach, but create an additional bit vector showing which elements are to be removed
