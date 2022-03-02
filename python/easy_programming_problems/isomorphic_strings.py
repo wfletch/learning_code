@@ -2,6 +2,7 @@ class Solution:
     def isIsomorphic(self, s: str, t: str) -> bool:
         # Store a mapping of characters we have seen so far.
         s_hash = {}
+        t_hash = {}
         # Linearly iterate through
         for i,v in enumerate(s):
             if v in s_hash:
@@ -11,12 +12,13 @@ class Solution:
                     return False
             else:
                 # Check if we have a collision on one of the values
-                for k in s_hash:
-                    if s_hash[k] == t[i]:
-                        return False
+                if t[i] in t_hash:
+                    return False
                 s_hash[v] = t[i]
+                t_hash[t[i]] = v
         return True
             
+             
 #  LeetCode # 205
-#  Time Complexity: O(n^2). Need to iterate through the string and check hash for collision. Can be solved with an additional hash storing reverse mappings.
-#  Space Complexity: O(n). Need to Store Additional
+#  Time Complexity: O(n). 
+#  Space Complexity: O(2n). Need to Store Additional Memory for both hashes
