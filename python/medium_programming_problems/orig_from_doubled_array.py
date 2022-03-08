@@ -1,6 +1,5 @@
 class Solution:
     def findOriginalArray(self, changed: List[int]) -> List[int]:
-        used = [0 * len(changed)]
         if len(changed)%2 != 0:
             return []
         # Or we could...
@@ -47,12 +46,11 @@ class Solution:
                         edit = True
                 if edit == False:
                     return []
-        for a in k.keys():
-            print(a,k[a])
         return orig
 
         #LeetCode # 2007
         # Not super happy with the performance on this one. Will optimize Later!
+
             
             
                 
