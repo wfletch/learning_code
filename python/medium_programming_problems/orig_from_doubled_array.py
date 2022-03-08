@@ -1,4 +1,4 @@
-class Solution:
+ class Solution:
     def findOriginalArray(self, changed: List[int]) -> List[int]:
         if len(changed)%2 != 0:
             return []
@@ -6,9 +6,7 @@ class Solution:
         #   Go through the array, hash the counts.
         #   Iterate through the hashed counts and find the recipricols.. Decrement the count of each.
         # Add the values we used to the list
-        k = collections.defaultdict(int)
-        for i in changed:
-            k[i] +=1
+        k = collections.Counter(changed)
         # Cool, now we have the values hashed!
         # There are 2 possibilities for a number.
         # Either we need to find the doubleed value or the halved value.
@@ -20,7 +18,6 @@ class Solution:
         b =  list(k.keys())
         b.sort()
         b.reverse()
-        print(b)
         edit = False
         for val in b:
             while k[val] > 0: # Already been processed
@@ -47,11 +44,7 @@ class Solution:
                 if edit == False:
                     return []
         return orig
-
-        #LeetCode # 2007
+            
+ #LeetCode # 2007
         # Not super happy with the performance on this one. Will optimize Later!
-
-            
-            
-                
-        
+        # Actualy it turned out ok: 91.39% Performance with 13% memory
