@@ -4,6 +4,9 @@ class Solution:
         closeset_diff = 10000
         closeset_candidate = -1000
         for i in range(len(nums)):
+            if (i > 0 and nums[i] == nums[i-1]): #Minor optimization
+                # If the current value is the same as the previous value... we are duplicating effort
+                continue
             cur_val = nums[i]
             # Iterate through the 'rest' of the array and two-pointer search for possible values
             l_pointer = i+1
