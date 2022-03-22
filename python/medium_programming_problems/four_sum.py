@@ -8,6 +8,8 @@ class Solution:
             for j in range(len(nums)):
                 if j <= i:
                     continue
+                if i > 0 and nums[i] == nums[i-1]: # Significant optimization
+                    continue
                 l_pointer = j+1
                 r_pointer = len(nums)-1
                 val_1 = nums[i]
