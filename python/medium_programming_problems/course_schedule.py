@@ -58,3 +58,7 @@ class Solution:
         
         # Time : O(V + E) as we make sure we don't check again. This is significantly better
         # Space: O(V + E) 
+
+        # Finally,  we can topologically sort if we so wish.
+
+        # We are trying to find the global order in the DAG
