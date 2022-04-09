@@ -28,3 +28,7 @@ class Solution:
         # # O(n^2) for the search
         # # O(n^2) Time
         # # O(n) Space
+
+class Solution:
+    def suggestedProducts(self, products: List[str], searchWord: str) -> List[List[str]]:
+        pass
