@@ -29,6 +29,15 @@ class Solution:
         # # O(n^2) Time
         # # O(n) Space
 
+# Turns out, a trie is not really neccessery. We can sort and bisect on the prefix then return the values
 class Solution:
     def suggestedProducts(self, products: List[str], searchWord: str) -> List[List[str]]:
-        pass
+        i = 0
+        results = []
+        prefix = ""
+        products.sort()
+        for a in searchWord:
+            prefix += a
+            i = bisect.bisect_left(products, prefix, i)
+            results.append(w for w in products[i:i + 3] if w.startswith(prefix))
+        return results
