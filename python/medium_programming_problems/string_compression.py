@@ -40,4 +40,4 @@ class Solution:
         # LC # 443
         # Time: O(n)
         # Space: O(1)
-        # Flawless!
+        # Flawle
