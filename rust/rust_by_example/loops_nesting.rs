@@ -14,5 +14,5 @@ fn main(){
     while count < 100 {
         count +=1;
     }
-    println!("This is done!, again! count {}", count);
+    println!("This is done!, again! count {}", count)
 }
