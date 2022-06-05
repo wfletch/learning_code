@@ -14,5 +14,6 @@ func main() {
 	names[3] = "Meow"
 	fmt.Println(array)
 	fmt.Println(names)
-
+	fib := [6]int{1, 1, 2, 3, 5, 8}
+	fmt.Println(fib)
 }
