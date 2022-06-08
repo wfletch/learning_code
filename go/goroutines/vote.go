@@ -22,6 +22,7 @@ func main() {
 			}
 			finished++
 			cond.Broadcast() // Wake's up whoever is waiting on this condition variable
+			// Broadcast wakes up EVERYONE who is waiting, while signal will wake up just a specific waiter.
 		}()
 	}
 	// This is a design pattern
