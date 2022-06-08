@@ -25,6 +25,7 @@ func periodic() {
 		println("tick")
 		time.Sleep(1 * time.Second)
 		mu.Lock()
+		// This is to secure the variable
 		if done {
 			return
 		}
