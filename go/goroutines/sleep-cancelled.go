@@ -27,6 +27,7 @@ func periodic() {
 		mu.Lock()
 		// This is to secure the variable
 		if done {
+			mu.Unlock()
 			return
 		}
 		mu.Unlock()
