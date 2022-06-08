@@ -8,7 +8,7 @@ func sendRPC(x int) {
 func main() {
 	var a string
 	var wg sync.WaitGroup
-	for i := 0; i < 5; i++ {
+	for i := 0; i < 500000; i++ {
 		wg.Add(1)
 		go func(x int) { // This is defined as a closure
 			sendRPC(x)
