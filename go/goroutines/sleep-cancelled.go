@@ -18,6 +18,7 @@ func main() {
 	mu.Unlock()
 	println("Cancelled")
 	time.Sleep(3 * time.Second)
+	// Remember if the main go routine dies. Every child dies!
 }
 
 func periodic() {
