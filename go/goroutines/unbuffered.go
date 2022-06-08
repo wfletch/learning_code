@@ -9,8 +9,10 @@ func main() {
 	c := make(chan bool)
 	// Channels are synchronous.
 	// Someone needs to receive after a send!
+	// Channels are NOT QUEUES.
+	// Channels are syncgr
 	go func() {
-		time.Sleep(1 * time.Second)
+		time.Sleep(1 * time.Second) // We wait.
 		<-c
 		println("Finished Receving!")
 	}()
